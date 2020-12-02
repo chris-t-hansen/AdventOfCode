@@ -22,6 +22,7 @@ drop table if exists dbo.#inputRecordsCombos2
 ;
 drop table if exists dbo.#inputRecordsCombos3
 ;
+go
 
 -- Create temp table to store the input
 -- This is nice and simple since the input is just one column of Integers
@@ -87,3 +88,4 @@ select
 from
 	#inputRecordsCombos3 irc3
 ;
+go
