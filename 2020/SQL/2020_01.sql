@@ -1,3 +1,21 @@
+/*
+Solution for 2020 Day 1: Report Repair
+https://adventofcode.com/2020/day/1
+Written in T-SQL by Chris Hansen
+Website: https://circuitsandcode.wehappyfew.net/
+Twitter: https://twitter.com/chris_t_hansen
+Github: https://github.com/chris-t-hansen
+MIT License: https://github.com/circuitsandcode/AdventOfCode/blob/master/LICENSE
+
+Solutions written in T-SQL for Microsoft SQL Server
+Written in SQL Server 2019 Express and SQL Server Management Studio 18.7.1
+Both tools available for free at:
+https://www.microsoft.com/en-us/sql-server/sql-server-downloads
+
+Solutions use temp tables where possible.
+*/
+
+-- Clean up existing temp tables.
 drop table if exists dbo.#inputRecords
 ;
 drop table if exists dbo.#inputRecordsCombos2
@@ -6,6 +24,7 @@ drop table if exists dbo.#inputRecordsCombos3
 ;
 
 -- Create temp table to store the input
+-- This is nice and simple since the input is just one column of Integers
 create table #inputRecords
 (
 	inputValue int
@@ -13,8 +32,9 @@ create table #inputRecords
 ;
 go
 
+-- Load the input file to the temp table.
+-- Update to the folder and name of your input file
 bulk insert #inputRecords
---Update to the folder and name of your input file
 from 'C:\Files\2020_01_input.txt'
 with
 (
@@ -25,43 +45,45 @@ with
 ;
 go
 
-select
-	ir1.inputValue as inputValue1
-	, ir2.inputValue as inputValue2
+-- Part I
+-- Cross join the table onto itself to compare the sum of every value with every other value.
+-- When a row is found that matches up on to 2020, the query multiples the two values.
+-- Using a distinct since the cross join will put both matching numbers in each columns resulting in the correct answer appearing twice.
+select distinct
+	ir1.inputValue * ir2.inputValue as inputValueProduct
 	into #inputRecordsCombos2
 from
 	#inputRecords ir1
 	cross join #inputRecords ir2 -- Join every record to every record
+where
+	ir1.inputValue + ir2.inputValue = 2020 -- Only keep the records that add up to 2020
 ;
 go
 
-select
-	irc.inputValue1
-	, irc.inputValue2
-	, ir.inputValue as inputValue3
+-- Part II
+-- Same as Part I but looking for three values that sum to 2020 instead of just two values
+select distinct
+	ir1.inputValue * ir2.inputValue * ir3.inputValue as inputValueProduct
 	into #inputRecordsCombos3
 from
-	#inputRecords ir
-	cross join #inputRecordsCombos2 irc -- Join every record to every record
+	#inputRecords ir1
+	cross join #inputRecords ir2 -- Join every record to every record
+	cross join #inputRecords ir3 -- One more cross join to get a third column with every record
+where
+	ir1.inputValue + ir2.inputValue + ir3.inputValue = 2020 -- Only keep the records that add up to 2020
 ;
 go
 
-select distinct
+-- Output the solutions
+select
 	'Part I' as partName
-	, irc.inputValue1 * irc.inputValue2 as multipliedValue
+	, irc2.inputValueProduct
 from
-	#inputRecordsCombos2 irc
-where
-	irc.inputValue1 + irc.inputValue2 = 2020
-;
-go
-
-select distinct
+	#inputRecordsCombos2 irc2
+union
+select
 	'Part II' as partName
-	, irc.inputValue1 * irc.inputValue2 * irc.inputValue3 as multipliedValue
+	, irc3.inputValueProduct
 from
-	#inputRecordsCombos3 irc
-where
-	irc.inputValue1 + irc.inputValue2 + irc.inputValue3 = 2020
+	#inputRecordsCombos3 irc3
 ;
-go
