@@ -1,5 +1,5 @@
 # Advent of Code 2021 Warmup Exercise 
-My office runs an Advent of Code party each year. This year, they posted a warmup exercise to get everyone ready.
+My office runs an Advent of Code competition each year. This year, they posted a warmup exercise to get everyone excited.
 
 ## Example Problem
 Each line of input is a non-negative integer. Find the solution by subtracting the sum of the even numbers from the sum of the odd numbers.
