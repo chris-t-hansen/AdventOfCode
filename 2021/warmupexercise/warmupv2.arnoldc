@@ -1,0 +1,78 @@
+IT'S SHOWTIME
+HEY CHRISTMAS TREE runningtotal
+  YOU SET US UP 0
+HEY CHRISTMAS TREE val01
+  YOU SET US UP 4118
+HEY CHRISTMAS TREE val02
+  YOU SET US UP 2666
+HEY CHRISTMAS TREE val03
+  YOU SET US UP 7528
+HEY CHRISTMAS TREE val04
+  YOU SET US UP 3301
+HEY CHRISTMAS TREE val05
+  YOU SET US UP 3856
+HEY CHRISTMAS TREE val06
+  YOU SET US UP 2756
+HEY CHRISTMAS TREE val07
+  YOU SET US UP 4864
+HEY CHRISTMAS TREE val08
+  YOU SET US UP 3857
+HEY CHRISTMAS TREE val09
+  YOU SET US UP 6329
+HEY CHRISTMAS TREE val10
+  YOU SET US UP 8776
+GET YOUR ASS TO MARS runningtotal
+  DO IT NOW evenorodd val01 runningtotal
+GET YOUR ASS TO MARS runningtotal
+  DO IT NOW evenorodd val02 runningtotal
+GET YOUR ASS TO MARS runningtotal
+  DO IT NOW evenorodd val03 runningtotal
+GET YOUR ASS TO MARS runningtotal
+  DO IT NOW evenorodd val04 runningtotal
+GET YOUR ASS TO MARS runningtotal
+  DO IT NOW evenorodd val05 runningtotal
+GET YOUR ASS TO MARS runningtotal
+  DO IT NOW evenorodd val06 runningtotal
+GET YOUR ASS TO MARS runningtotal
+  DO IT NOW evenorodd val07 runningtotal
+GET YOUR ASS TO MARS runningtotal
+  DO IT NOW evenorodd val08 runningtotal
+GET YOUR ASS TO MARS runningtotal
+  DO IT NOW evenorodd val09 runningtotal
+GET YOUR ASS TO MARS runningtotal
+  DO IT NOW evenorodd val10 runningtotal
+TALK TO THE HAND runningtotal
+YOU HAVE BEEN TERMINATED
+
+LISTEN TO ME VERY CAREFULLY evenorodd
+  I NEED YOUR CLOTHES YOUR BOOTS AND YOUR MOTORCYCLE currentval
+  I NEED YOUR CLOTHES YOUR BOOTS AND YOUR MOTORCYCLE currentrunningtotal
+  GIVE THESE PEOPLE AIR
+HEY CHRISTMAS TREE modresult
+  YOU SET US UP 0
+HEY CHRISTMAS TREE returnval
+  YOU SET US UP 0
+HEY CHRISTMAS TREE modzero
+  YOU SET US UP 0
+GET TO THE CHOPPER modresult
+  HERE IS MY INVITATION currentval
+  I LET HIM GO 2
+  ENOUGH TALK
+GET TO THE CHOPPER modzero
+  HERE IS MY INVITATION modresult
+  YOU ARE NOT YOU YOU ARE ME 1
+  ENOUGH TALK
+BECAUSE I'M GOING TO SAY PLEASE modzero
+  GET TO THE CHOPPER returnval
+    HERE IS MY INVITATION currentval
+    GET UP currentrunningtotal
+    ENOUGH TALK
+ BULLSHIT
+  GET TO THE CHOPPER returnval
+    HERE IS MY INVITATION currentval
+    YOU'RE FIRED -1
+    GET UP currentrunningtotal
+    ENOUGH TALK
+YOU HAVE NO RESPECT FOR LOGIC
+I'LL BE BACK returnval
+HASTA LA VISTA, BABY
